@@ -15,9 +15,20 @@ export function submitEntry(wikitext, summary) {
         createonly: true // Prevents overwriting existing definitions
     }).done(function(data) {
         console.log("Saved successfully!", data);
+       
         location.reload(); 
+    
+    
     }).fail(function(code, data) {
+        
+        
         console.error("API Error:", code, data);
+       
+        
         alert('Failed to save entry: ' + code);
+
+        
     });
+
+    
 }
